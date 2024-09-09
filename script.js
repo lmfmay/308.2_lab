@@ -35,4 +35,11 @@
         console.log(`Plants are taking up ${(week3Plantspace/area)*100}% of garden space. Keep planting!`)
     }
 
-// PART 2:
+// PART 2: The conservation area in which the garden is located has multiple other gardens. 
+// Objective 1: Determine amount of additional space that would be required if the scientists were to start with 100 plants, and did not prune them for 10 weeks.
+console.log(`If the scientists were to start with 100 plants and there is no pruning for 10 weeks, the number of plants at Week 10 would be ${100*(2**8)}. The total amount of space taken by plants would be ${plantSpace(100*(2**8))} square meters, and the amount of additional space required would be ${plantSpace(100*(2**8))-area} square meters based on the current capacity of ${area} square meters.`)
+
+// If the space remained circular, what would be the radius of this expanded garden?
+let newArea = plantSpace(100*(2**8)); 
+let newRadius = Math.sqrt(newArea/PI);
+console.log(`If the space remained circular, the  radius of this expanded garden would be ${newRadius} meters.`)
